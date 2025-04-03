@@ -1,3 +1,12 @@
 The parts I will perform will be, in order, quality assessment, DNA and RNA assembly, quality assessmnet of the assembly, structural and functional annotation, 
 and differential expression analysis.
 If I manage, I will also perform extra analysis in form of assembly using a different software, and assembly evaluation with Merqury.
+
+Week 15: Canu assembly, Quality control and trim of DNA Illumina (FASTQC), Quality assessment of DNA assembly (BUSCO and Quast), align RNA to DNA (STAR).
+Week 16: Polish using Illumina DNA (Pilon), Softmasking DNA (RepeatMasker).
+Week 17: Structural annotation (BRAKER2) and functional annotation (EggNOG).
+Week 18: Differential expression (featureCounts).
+Week 19: Spare time, if in phase start with extra analysis.
+Week 20: Extra analysis.
+Week 21: Finish up and polish github, turn in final github. 
+Week 22: Presentation.
