@@ -6,3 +6,6 @@ zcat /proj/uppmax2025-3-3/Genome_Analysis/4_Zhou_2023/reads/chr3_clean_nanopore.
 Total bases: 10024814876 =10Mbp
 Sedan kom jag inte längre - hittar varken coverage eller genome size för chr3
 
+2025-04-06
+I decided a precise value was not required, and took 191Mb/14 chromosomes = 13.6mb in the canu command. 
+I started running the canu batch file at 17.33
