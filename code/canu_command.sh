@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2025-3-3
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH -n 4
+#SBATCH -n 8
 #SBATCH -t 26:00:00
 #SBATCH -J canu_analysis
 #SBATCH --mail-type=ALL
