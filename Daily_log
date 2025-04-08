@@ -9,3 +9,9 @@ Sedan kom jag inte längre - hittar varken coverage eller genome size för chr3
 2025-04-06
 I decided a precise value was not required, and took 191Mb/14 chromosomes = 13.6mb in the canu command. 
 I started running the canu batch file at 17.33
+
+2025-04-07
+Ran FASTQC for the two DNA Illumina fq-files. They were in great quality.
+
+2025-04-08
+Rerun of canu with 8 nodes. Started 8.40
