@@ -15,3 +15,6 @@ Ran FASTQC for the two DNA Illumina fq-files. They were in great quality.
 
 2025-04-08
 Rerun of canu with 8 nodes. Started 8.40
+
+2025-04-14
+Ran QUAST on the assemblied genome 
