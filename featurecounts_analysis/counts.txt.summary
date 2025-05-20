@@ -1,0 +1,15 @@
+Status	Sample1_control.sorted.bam	Sample2_control.sorted.bam	Sample3_control.sorted.bam	Sample4_heat_treated.sorted.bam	Sample5_heat_treated.sorted.bam	Sample6_heat_treated.sorted.bam
+Assigned	2660209	2504393	2627384	2636949	2510266	2862872
+Unassigned_Unmapped	39347320	40306202	41987949	40645516	39547196	40356468
+Unassigned_Read_Type	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0
+Unassigned_MultiMapping	802282	582916	721495	797888	687174	661232
+Unassigned_Secondary	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0
+Unassigned_NoFeatures	479511	508969	461246	504418	473098	545599
+Unassigned_Overlapping_Length	0	0	0	0	0	0
+Unassigned_Ambiguity	592054	422509	490755	413388	467977	438321

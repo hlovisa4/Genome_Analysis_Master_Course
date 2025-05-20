@@ -22,6 +22,6 @@ ALIGNMENT=/home/loha7619/GenomAnalys/Genome_Analysis_Master_Course/Pilon_analysi
 #Commands
 BuildDatabase -name N.japonicum $ALIGNMENT
 RepeatModeler -database N.japonicum -threads 16 -LTRStruct > out.file
-RepeatMasker -threads 16 -gff -lib consensi.fa.classified -dir Maskeroutput $ALIGNMENT
+RepeatMasker -gff -lib /domus/h1/loha7619/GenomAnalys/Genome_Analysis_Master_Course/code/RM_*/consensi.fa.classified -dir Maskeroutput $ALIGNMENT
 
 
