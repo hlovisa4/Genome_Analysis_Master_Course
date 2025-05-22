@@ -17,5 +17,5 @@ Step 3. Annotation
 Structural annotation was performed using BRAKER2 by comparing the reference genome against all RNA samples, and functional annotation was performed on the braker.aa using EggNog-mapper. 
 
 Step 4. Expression Analysis
-Each RNA sample was firstly aligned to the reference genome before using featureCounts to extract the expression levels. These were then anlysed using an R-script for DESeq ("DeSeq.R") and the results showed that the most differently expressed genes were ....
+Each RNA sample was firstly aligned to the reference genome before using featureCounts to extract the expression levels. These were then anlysed using an R-script for DESeq ("Deseq.R") and the results showed that the most differently expressed genes were ....
 
