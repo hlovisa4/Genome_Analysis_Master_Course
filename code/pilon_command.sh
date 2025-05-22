@@ -3,7 +3,7 @@
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 2
-#SBATCH -t 06:00:00
+#SBATCH -t 24:00:00
 #SBATCH -J pilon_analysis
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user lovisa.hamback.7619@student.uu.se
@@ -11,12 +11,12 @@
 
 # Load modules
 module load bioinfo-tools
-module load pilon
 module load java 
+module load Pilon/1.24
 
 #Files
 ASSEMBLY=/home/loha7619/GenomAnalys/Genome_Analysis_Master_Course/flye_files/assembly.fasta
-BAMFILE=
+BAMFILE=/home/loha7619/GenomAnalys/Genome_Analysis_Master_Course/code/aligned_reads.sorted.bam
 
 #Commands
-pilon --genome $ASSEMBLY --bam $BAMFILE --outdir /home/loha7619/GenomAnalys/Genome_Analysis_Master_Course/Pilon_analysis
+java -jar $PILON_HOME/pilon.jar --genome $ASSEMBLY --bam $BAMFILE --outdir /home/loha7619/GenomAnalys/Genome_Analysis_Master_Course/Pilon_analysis
