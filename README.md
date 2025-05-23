@@ -5,17 +5,39 @@ This project will be a recreation of the paper "Chromosome-level genome assembly
 
 Project description:
 Step 1. Preprocessing
-I started with checking the quality of my illumina reads using FASTQC before and after trimming using trimmomatic. The quality was good before with positions with quality score below 20, as shown with the high retention rate of the trimming (98.8%). AFTERWARDS
+I started with checking the quality of my illumina reads using FASTQC before and after trimming using trimmomatic. The quality was good before with positions with quality score below 20, as shown with the high retention rate of the trimming (98.8%). After the trimming, the FASTQC was still excellent, which is reasonable considering not much changed during the trimming (trimmed_{1P/2P}_fastqc.html)
 
-Step 2. Genome assembly
+Step 2. Genome assembly\\
 The Nanopore long-read DNA data was assembled using two different assemblers, Canu and Flye. Quast analysis was performed to determine which assembly to move forward with and the Flye assembly was selected due to lower amounts of contigs (48 vs 107), higher N50 (2069003 vs 864513) and lower L50 (3 vs 6). These results are shown in the repositories quast_analysis and quast_analysis_canu. 
-The assembly was also evaluated using BUSCO with the command "busco -i assembly.fasta -m genome --auto-lineage-euk --out busco_results -f", which showed 
-For an extra analysis, I also ran Merqury to assess the assembly which showed that 
+The assembly was also evaluated using BUSCO, which showed a 9.9% completeness, which is due to the fact that there is only one chromosome assembled. 
+  -------------------------------------------------------------------------------------------
+    |Results from dataset viridiplantae_odb10                                                  |
+    -------------------------------------------------------------------------------------------
+    |C:9.9%[S:8.7%,D:1.2%],F:0.2%,M:89.9%,n:425,E:7.1%                                         |
+    |42    Complete BUSCOs (C)    (of which 3 contain internal stop codons)                    |
+    |37    Complete and single-copy BUSCOs (S)                                                 |
+    |5    Complete and duplicated BUSCOs (D)                                                   |
+    |1    Fragmented BUSCOs (F)                                                                |
+    |382    Missing BUSCOs (M)                                                                 |
+    |425    Total BUSCO groups searched                                                        |
+    -------------------------------------------------------------------------------------------
+
+For an extra analysis, I also ran Merqury to assess the assembly which showed that the error rate was 0.0186% and the qv was	37.3, which is really good as well. 
 To polish the flye assembly, the Illumina was first aligned to the Nanopore assembly using BWA, and the polishing was performed using Pilon. Lastly, the repeats in the pilon fasta-file were masked using RepeatMasker. 
 
 Step 3. Annotation
 Structural annotation was performed using BRAKER2 by comparing the reference genome against all RNA samples, and functional annotation was performed on the braker.aa using EggNog-mapper. 
 
 Step 4. Expression Analysis
-Each RNA sample was firstly aligned to the reference genome before using featureCounts to extract the expression levels. These were then anlysed using an R-script for DESeq ("DeSeq.R") and the results showed that the most differently expressed genes were...
+Each RNA sample was firstly aligned to the reference genome before using featureCounts to extract the expression levels. These were then anlysed using an R-script for DESeq ("DeSeq.R") and the results showed that the most differently expressed genes were the following, with none of them being annotated by eggnog-mapper so their function remains unknown but could be examined using homology search. 
+
+                           padj
+                      <numeric>
+file_1_file_1_g1493 8.94286e-19
+file_1_file_1_g176  2.79886e-16
+file_1_file_1_g663  2.79886e-16
+file_1_file_1_g1492 9.18157e-15
+file_1_file_1_g1905 9.45439e-14
+file_1_file_1_g51   9.45439e-14
+
 
